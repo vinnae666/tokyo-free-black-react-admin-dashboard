@@ -18,7 +18,7 @@ function Overview() {
   return (
     <OverviewWrapper>
       <Helmet>
-        <title>ConsultEth Ceramic Social</title>
+        <title>ConsultEth Social</title>
       </Helmet>
       <Container maxWidth="lg">
         <Box display="flex" justifyContent="center" py={5} alignItems="center">
