@@ -105,7 +105,7 @@ function Hero() {
             component="a"
             target="_blank"
             rel="noopener"
-            href="https://bloomui.com/product/tokyo-free-black-react-typescript-material-ui-admin-dashboard"
+            href="https://ceramic.network/how-it-works"
             size="large"
             variant="text"
           >
