@@ -121,11 +121,10 @@ function Hero() {
               </MuiAvatar>
               <Typography variant="h4">
                 <Box sx={{ pb: 2 }}>
-                  <b>Powered by MUI (Material-UI)</b>
+                  <b>Powered by MetaMask </b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  A simple and customizable component library to build faster,
-                  beautiful, and accessible React apps.
+                  Ethereum Wallet
                 </Typography>
               </Typography>
             </Grid>
@@ -138,11 +137,10 @@ function Hero() {
               </TsAvatar>
               <Typography variant="h4">
                 <Box sx={{ pb: 2 }}>
-                  <b>Built with Typescript</b>
+                  <b>Built with Ceramic </b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  Tokyo Free Black features a modern technology stack and is
-                  built with React + Typescript.
+                  Self Sovereign, Decentralized Data Streams
                 </Typography>
               </Typography>
             </Grid>
