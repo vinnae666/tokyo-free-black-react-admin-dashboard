@@ -18,7 +18,7 @@ function Footer() {
       >
         <Box>
           <Typography variant="subtitle1">
-            &copy; 2022 - Tokyo Free Black React Typescript Admin Dashboard
+            &copy; 2023 - ConsultEth Technologies
           </Typography>
         </Box>
         <Typography
@@ -29,7 +29,7 @@ function Footer() {
         >
           Crafted by{' '}
           <Link
-            href="https://bloomui.com"
+            href="https://consulteth.xyz"
             target="_blank"
             rel="noopener noreferrer"
           >
