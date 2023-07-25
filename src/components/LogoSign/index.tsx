@@ -99,7 +99,7 @@ function Logo() {
 
   return (
     <TooltipWrapper
-      title="ConsultEth Ceramic Social"
+      title="ConsultEth Social"
       arrow
     >
       <LogoWrapper to="/overview">
