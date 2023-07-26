@@ -64,7 +64,7 @@ const authenticateKeyDID = async (ceramic: CeramicApi, compose: ComposeClient) =
     console.log("Found seed: " + seed_array)
   }
   const provider = new Ed25519Provider(seed_array)
-  const did = new DID({ provider, resolver: getResolver() })
+  const did = new DID({ provider, getResolver() })
   await did.authenticate()
   ceramic.did = did
   compose.setDID(did)
