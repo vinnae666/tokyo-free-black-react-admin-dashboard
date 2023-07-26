@@ -8,11 +8,11 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 
-import { authenticateCeramic } from '../../../utils';
+// import { authenticateCeramic } from '../../../utils';
 
-import { PostProps } from '../../../types';
+// import { PostProps } from '../../../types';
 
-import {useCeramicContext} from "../../../context";
+// import {useCeramicContext} from "../../../context";
     
       
 const TypographyH1 = styled(Typography)(
@@ -81,35 +81,6 @@ const TsAvatar = styled(Box)(
 `
 );
 
-    const [isVisible, setIsVisible] = useState(true);
-    const clients = useCeramicContext()
-    const { ceramic, composeClient } = clients
-    const isLogged = () => {
-        return localStorage.getItem("logged_in") == "true"
-    };
-
-    const handleOpen = () => {
-        if(localStorage.getItem("logged_in")){
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    };
-
-    const handleKeyDid = () => {
-        localStorage.setItem("ceramic:auth_type", "key");
-        setIsVisible(false);
-        authenticateCeramic(ceramic, composeClient)
-    };
-
-    const handleEthPkh = () => {
-        localStorage.setItem("ceramic:auth_type", "eth");
-        setIsVisible(false);
-        authenticateCeramic(ceramic, composeClient)
-    };
-
-
-
 function Hero() { 
   return (
     <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
@@ -135,7 +106,6 @@ function Hero() {
           <Button
             component={RouterLink}
             to="/dashboards/tasks"
-            onClick={handleEthPkh}
             size="large"
             variant="contained"
           >
