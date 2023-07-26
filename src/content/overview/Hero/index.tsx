@@ -13,7 +13,8 @@ import { authenticateCeramic } from '../../../../utils';
 import { PostProps } from '../../../../types';
 
 import {useCeramicContext} from "../../../../context";
-
+    
+      
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
     font-size: ${theme.typography.pxToRem(50)};
@@ -80,7 +81,36 @@ const TsAvatar = styled(Box)(
 `
 );
 
-function Hero() {
+    const [isVisible, setIsVisible] = useState(true);
+    const clients = useCeramicContext()
+    const { ceramic, composeClient } = clients
+    const isLogged = () => {
+        return localStorage.getItem("logged_in") == "true"
+    };
+
+    const handleOpen = () => {
+        if(localStorage.getItem("logged_in")){
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    const handleKeyDid = () => {
+        localStorage.setItem("ceramic:auth_type", "key");
+        setIsVisible(false);
+        authenticateCeramic(ceramic, composeClient)
+    };
+
+    const handleEthPkh = () => {
+        localStorage.setItem("ceramic:auth_type", "eth");
+        setIsVisible(false);
+        authenticateCeramic(ceramic, composeClient)
+    };
+
+
+
+function Hero() { 
   return (
     <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
       <Grid
@@ -105,6 +135,7 @@ function Hero() {
           <Button
             component={RouterLink}
             to="/dashboards/tasks"
+            onClick={handleEthPkh}
             size="large"
             variant="contained"
           >
