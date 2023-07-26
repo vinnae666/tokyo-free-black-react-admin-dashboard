@@ -30,7 +30,7 @@ export const authenticateCeramic = async (ceramic: CeramicApi, compose: ComposeC
   console.log(logged_in)
   if (logged_in == "true"){
     if (popup) {
-      popup.display = 'none';
+    
     }
   }
   let auth_type = localStorage.getItem("ceramic:auth_type")
