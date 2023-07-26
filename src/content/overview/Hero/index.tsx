@@ -1,8 +1,18 @@
+import { useEffect, useState } from 'react';
+
+import React from "react";
+
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
 import { Link as RouterLink } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
+
+import { authenticateCeramic } from '../../../../utils';
+
+import { PostProps } from '../../../../types';
+
+import {useCeramicContext} from "../../../../context";
 
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
