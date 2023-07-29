@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { authenticateCeramic } from '../utils'
-import {useCeramicContext} from "../context";
+import { authenticateCeramic } from '../../../utils'
+import {useCeramicContext} from "../../../context";
 
 const AuthPrompt = () => {
     const [isVisible, setIsVisible] = useState(true);
