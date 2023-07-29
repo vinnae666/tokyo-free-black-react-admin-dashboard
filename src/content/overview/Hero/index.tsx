@@ -8,12 +8,13 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 
-// import { authenticateCeramic } from '../../../utils';
+import { authenticateCeramic } from '../../../utils';
 
-// import { PostProps } from '../../../types';
+import { PostProps } from '../../../types';
 
-// import {useCeramicContext} from "../../../context";
-    
+import {useCeramicContext} from "../../../context";
+
+import AuthPrompt from "../did-select-popup";
       
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
@@ -82,6 +83,14 @@ const TsAvatar = styled(Box)(
 );
 
 function Hero() { 
+  const clients = useCeramicContext()
+  const { ceramic, composeClient } = clients
+  const [profile, setProfile] = useState<Profile | undefined>()
+
+  const handleLogin = async () => {
+    await authenticateCeramic(ceramic, composeClient)
+  }
+    
   return (
     <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
       <Grid
@@ -109,7 +118,7 @@ function Hero() {
             size="large"
             variant="contained"
           >
-            Authenticate DID
+            <AuthPrompt/>
           </Button>
           <Button
             sx={{ ml: 2 }}
