@@ -14,7 +14,7 @@ import { PostProps } from '../../../types';
 
 import {useCeramicContext} from "../../../context";
 
-import AuthPrompt from "../did-select-popup";
+import AuthPrompt from "./did-select-popup";
       
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
@@ -82,14 +82,14 @@ const TsAvatar = styled(Box)(
 `
 );
 
-function Hero() { 
   const clients = useCeramicContext()
   const { ceramic, composeClient } = clients
-  const [profile, setProfile] = useState<Profile | undefined>()
-
+  
   const handleLogin = async () => {
     await authenticateCeramic(ceramic, composeClient)
   }
+
+function Hero() { 
     
   return (
     <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
@@ -112,14 +112,8 @@ function Hero() {
           >
             The decentralized super app for web3
           </TypographyH2>
-          <Button
-            component={RouterLink}
-            to="/dashboards/tasks"
-            size="large"
-            variant="contained"
-          >
             <AuthPrompt/>
-          </Button>
+         
           <Button
             sx={{ ml: 2 }}
             component="a"
