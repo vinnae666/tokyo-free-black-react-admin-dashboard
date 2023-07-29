@@ -79,8 +79,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@typescript-eslint/eslint-plugin": "5.27.0",
-    "@typescript-eslint/parser": "5.27.0",
     "prettier": "2.6.2",
     "@composedb/types": "^0.3.0",
     "@glazed/types": "^0.2.0",
